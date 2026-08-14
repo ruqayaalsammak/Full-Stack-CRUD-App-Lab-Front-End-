@@ -10,6 +10,7 @@ const ProductList = (props) => {
                         {product.title}
                         </Link>
                     </h3>
+                    <p>Description: {product.description}</p>
                     <p>Category: {product.category}</p>
                     <p>Price: ${product.price}</p>
                     <p>Quantity: {product.quantity}</p>

@@ -18,16 +18,12 @@ const ProductForm = (props) => {
         setFormData({...formData, [event.target.name]: event.target.value })
     }
 
-    const handleSubmit = async (event) => {
-        event.preventDefault()
-        await props.addProduct({
-            ...formData,
-            price: Number(formData.price),
-            quantity: Number(formData.quantity),
-        })
-        setFormData(initialState)
-        navigate('/products')
-    }
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    await props.addProduct(formData)
+    setFormData(initialState)
+    navigate('/products')
+  }
 
     return (
         <main>

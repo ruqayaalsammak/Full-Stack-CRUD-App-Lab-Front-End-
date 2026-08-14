@@ -4,9 +4,9 @@ import { useParams, useNavigate } from "react-router"
 const UpdateProduct = (props) => {
     const { productId } = useParams()
     const navigate = useNavigate()
-
-    const productToEdit = props.product.find((p) => p._id === productId)
-
+    const productToEdit = props.product.find((product) => {
+        return product._id === productId
+    })
     const initialState = {
         title: productToEdit ? productToEdit.title : '',
         discription: productToEdit ? productToEdit.discription : '',

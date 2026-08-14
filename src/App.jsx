@@ -2,7 +2,7 @@ import * as productService from './services/products'
 import { useEffect, useState } from 'react'
 import NavBar from './components/NavBar'
 import ProductList from './pages/ProductList'
-import { Route, Routes } from 'react-router'
+import { Route, Routes } from 'react-router-dom'
 import ProductDetails from './pages/ProductDetails'
 import ProductForm from './pages/ProductForm'
 import UpdateProduct from './pages/UpdateProduct'
@@ -47,9 +47,9 @@ const App = () => {
 
   return (
     <>
-      <h1>Product Managment</h1>
       <NavBar />
-
+      <h1>Product Managment</h1>
+      
       <Routes>
         <Route path="/" element={<h2>Welcome to the Product Managment</h2>} />
         <Route path="/products" element={<ProductList products={products} />} />
